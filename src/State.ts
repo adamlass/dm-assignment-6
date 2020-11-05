@@ -76,15 +76,6 @@ export default class State {
         return this.states.get(key)
     }
 
-    // private getStates(): Map<string, Set<number>> {
-    //     return this.states
-    // }
-
-    private getSingleStateValue(key: string): Set<number> | undefined {
-        //TODO may need to implement an iterator??
-        return this.getState(key)?.entries().next().value
-    }
-
     private copyState(state: State): State {
         let copy: State = new State()
         return Object.assign(copy, state)
