@@ -1,7 +1,7 @@
 import State from "./State";
 import Node from "./Node"
 
-export default class AST {
+export default class AbstractSyntaxTree {
     private _state: State | null
     private root: Node | null
 

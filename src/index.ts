@@ -1,4 +1,4 @@
-import AST from "./AST";
+import AbstractSyntaxTree from "./AbstractSyntaxTree";
 import State from "./State";
 import codeInts from "./codeInts"
 
@@ -18,10 +18,10 @@ s2.add(4)
 st2.addState("x", s2)
 
 
-console.log("st1")
-console.log(st1.toString())
-console.log("st2")
-console.log(st2.toString())
+// console.log("st1")
+// console.log(st1.toString())
+// console.log("st2")
+// console.log(st2.toString())
 
 // const stUnion: State = st1.union(st2)
 // console.log("union:", stUnion.toString())
@@ -45,14 +45,10 @@ ints.addState("a", a)
 ints.addState("b", b)
 ints.addState("c", c)
 
-const ast = new AST(codeInts)
+const ast = new AbstractSyntaxTree(codeInts)
 
 ast.buildTree()
 
 const isEqual = ast.state?.equals(ints)
 
 console.log('isEqual:', isEqual)
-
-
-
-
