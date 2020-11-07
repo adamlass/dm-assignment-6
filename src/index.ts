@@ -51,5 +51,5 @@ ast.buildTree()
 
 const isEqual = ast.state?.equals(ints)
 
-
 console.log('isEqual:', isEqual)
+//returns: true
